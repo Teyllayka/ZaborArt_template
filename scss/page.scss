@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+$fnt-monster: 'Montserrat', sans-serif;
+$fnt-noto:'Noto Sans', sans-serif;
+$fnt-roboto: 'Roboto', sans-serif;
+
+$clr-white: #ffffff;
+$clr-black: #0b0b0b;
+
+main {
+    background-color: $clr-black;
+    min-height: 100vh;
+    padding: 2rem;
+    
+    display: grid;
+    align-items: center;
+
+    .main {
+        width: 80%;
+        margin:auto;
+
+        min-height: 50vh;
+
+        font-family: $fnt-roboto;
+        color: $clr-white;
+
+        .contacts {
+            display:flex;
+            align-items: flex-start;
+            justify-content: center;
+            flex-wrap: wrap;
+            
+            @media (max-width: 1500px) {
+                gap:5rem;
+            }
+
+            &>.info {
+                flex:40%
+            }
+            &>.fields {
+                flex:60%
+            }
+
+            .title {
+                // font-family: $fnt-robot;
+                font-style: normal;
+                font-weight: 300;
+                font-size: 48px;
+                line-height: 56px;
+                color: #ffffff;
+
+                text-transform: uppercase;
+
+                b {
+                    font-family: $fnt-roboto;
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 48px;
+                    line-height: 56px;
+                    color: #FFFFFF;
+                }
+            }
+
+            .origin {
+                font-family: $fnt-roboto;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 36px;
+                line-height: 42px;
+                color: #FFFFFF;
+
+                text-transform: uppercase;
+
+                margin: 3rem 0;
+            }
+
+            .information {
+                display: flex;
+                flex-direction: column;
+                gap:1.5rem;
+
+                .thing {
+                    font-family: $fnt-roboto;
+                    font-style: normal;
+                    font-weight: 200;
+                    font-size: 24px;
+                    line-height: 28px;
+                    color: #FFFFFF;
+                }
+            }
+
+            &>* {
+                flex:50%
+            }
+
+
+
+            .fields {
+                align-self: flex-start;
+                flex-direction: column;
+                display:flex;
+                gap: 2rem;
+                flex-wrap: wrap;
+
+                .button-container {
+                   display: flex;
+                   justify-content: flex-end;
+
+                  .primary {
+                     padding-top: 15px;
+                     padding-bottom: 15px;
+                     padding-left: 40px;
+                     padding-right: 40px;
+                     float: right;
+                     border-width: 0px;
+                     border-radius: 0px;
+                     outline: none;
+                     font-family: $fnt-roboto;
+                     font-style: normal;
+                     font-weight: 300;
+                     font-size: 36px;
+                     line-height: 42px;
+                     text-align: center;
+                     background-color: #FFFFFF;
+                     color: #000000;
+                     cursor: pointer;
+                     transition: background-color 0.5s ease, color 0.5s ease;
+
+
+                     &:hover {
+                        background-color: #000000;
+                        color:#ffffff;
+                     }
+                  }
+
+                  
+                }
+
+                .inputs {
+                    display:flex;
+                    flex-direction: column;
+                    gap:1.25rem;
+                    width: 100%;
+
+                    .input {
+                        width: 100%;
+                        padding-top: 20px;
+                        padding-bottom: 20px;
+                        padding-left: 20px;
+                        background-color: #000000;
+                        border: 1px solid white;
+                        border-radius: 0px;
+                        outline: none;
+                        font-family: $fnt-roboto;
+                        font-style: normal;
+                        font-weight: 200;
+                        font-size: 24px;
+                        line-height: 28px;
+                        color: #FFFFFF;
+                    }
+
+                    .input:last-child {
+                       height:110px;
+                    }
+
+                    .doubleinput {
+                       display:flex;
+                       justify-content: space-between;
+                    }
+
+                    .doublefield {
+                        width: 47%;
+                        padding-top: 20px;
+                        padding-bottom: 20px;
+                        padding-left: 20px;
+                        background-color: #000000;
+                        border: 1px solid white;
+                        border-radius: 0px;
+                        outline: none;
+                        font-family: $fnt-roboto;
+                        font-style: normal;
+                        font-weight: 200;
+                        font-size: 24px;
+                        line-height: 28px;
+                        color: #FFFFFF;
+                    }
+                }
+            }
+        }
+    }
+}
